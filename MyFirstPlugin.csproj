@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>BerryAP</AssemblyName>
+    <Product>Berry Bury Berry Archipelago</Product>
+    <Version>1.0.0</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <RestoreAdditionalProjectSources>
+      https://api.nuget.org/v3/index.json;
+      https://nuget.bepinex.dev/v3/index.json;
+      https://nuget.samboy.dev/v3/index.json
+    </RestoreAdditionalProjectSources>
+    <RootNamespace>BerryAP</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Archipelago.MultiClient.Net" Version="6.7.1" />
+    <PackageReference Include="BepInEx.Analyzers" Version="1.0.8" PrivateAssets="all" />
+    <PackageReference Include="BepInEx.Core" Version="5.4.21" />
+    <PackageReference Include="BepInEx.PluginInfoProps" Version="2.1.0" />
+    <PackageReference Include="UnityEngine.Modules" Version="6000.4.0" />
+  </ItemGroup>
+  
+  <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>C:\SteamLibrary\steamapps\common\BerryBerryBerry\BerryBerryBerryBerryBerryBerryBerryBerryBerry_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>C:\SteamLibrary\steamapps\common\BerryBerryBerry\BerryBerryBerryBerryBerryBerryBerryBerryBerry_Data\Managed\DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="Dreamteck.Splines">
+      <HintPath>C:\SteamLibrary\steamapps\common\BerryBerryBerry\BerryBerryBerryBerryBerryBerryBerryBerryBerry_Data\Managed\Dreamteck.Splines.dll</HintPath>
+    </Reference>
+    <Reference Include="Dreamteck.Utilities">
+      <HintPath>C:\SteamLibrary\steamapps\common\BerryBerryBerry\BerryBerryBerryBerryBerryBerryBerryBerryBerry_Data\Managed\Dreamteck.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch Transport for Netcode for GameObjects">
+      <HintPath>C:\SteamLibrary\steamapps\common\BerryBerryBerry\BerryBerryBerryBerryBerryBerryBerryBerryBerry_Data\Managed\Facepunch Transport for Netcode for GameObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="Lofelt.NiceVibrations">
+      <HintPath>C:\SteamLibrary\steamapps\common\BerryBerryBerry\BerryBerryBerryBerryBerryBerryBerryBerryBerry_Data\Managed\Lofelt.NiceVibrations.dll</HintPath>
+    </Reference>
+    <Reference Include="Lofelt.NiceVibrations.Demo">
+      <HintPath>C:\SteamLibrary\steamapps\common\BerryBerryBerry\BerryBerryBerryBerryBerryBerryBerryBerryBerry_Data\Managed\Lofelt.NiceVibrations.Demo.dll</HintPath>
+    </Reference>
+    <Reference Include="MoreMountains.Tools">
+      <HintPath>C:\SteamLibrary\steamapps\common\BerryBerryBerry\BerryBerryBerryBerryBerryBerryBerryBerryBerry_Data\Managed\MoreMountains.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>C:\SteamLibrary\steamapps\common\BerryBerryBerry\BerryBerryBerryBerryBerryBerryBerryBerryBerry_Data\Managed\websocket-sharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
